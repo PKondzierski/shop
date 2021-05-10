@@ -15,7 +15,7 @@ import pl.kondzierski.shop.security.service.ApplicationUserService;
 
 import java.util.Optional;
 
-@RestController
+@RestController("/user")
 public class UserController {
 
     @Autowired
@@ -28,6 +28,7 @@ public class UserController {
     private PasswordConfig passwordConfig;
 
 
+/*
     @GetMapping("/{user}")
     @PreAuthorize("hasAuthority('insert_user') or hasAuthority('read_user')")
     public ResponseEntity<User> rest(@PathVariable String user) throws UserNotFoundException {
@@ -37,5 +38,11 @@ public class UserController {
 
         throw UserNotFoundException.createException(String.format("User %s not found",user));
     }
+*/
+
+/*    @GetMapping("/{qwe}")
+    public String givePasswordToDataSql(@PathVariable String qwe){
+        return passwordConfig.passwordEncoder().encode(qwe);
+    }*/
 
 }

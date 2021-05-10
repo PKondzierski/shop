@@ -21,7 +21,7 @@ public class Role {
     @Column(name = "role_name")
     private String roleName;
 
-    @OneToMany(mappedBy = "role", fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "role")
     private Set<User> users = new HashSet<>();
 
 
@@ -31,7 +31,6 @@ public class Role {
                     joinColumns = @JoinColumn(name="role_id"),
                     inverseJoinColumns = @JoinColumn(name = "permission_id")
             )
-    @JsonIgnoreProperties("roles")
     Set<Permission> permissions = new HashSet<>();
 
     @Override
