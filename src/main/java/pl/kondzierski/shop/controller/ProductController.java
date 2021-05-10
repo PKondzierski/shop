@@ -26,7 +26,7 @@ public class ProductController {
 
     @GetMapping("/{id}")
     public ProductDto getProduct(@PathVariable Long id){
-\       // return productRepository.findMyProduct(id).getDescription();
+       // return productRepository.findMyProduct(id).getDescription();
         return productMapper.ObjectTtoDto(productRepository.findMyProduct(id));
     }
 
