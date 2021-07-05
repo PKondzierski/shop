@@ -46,8 +46,8 @@ public class Product {
     }
 
     @OneToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "product_class_id", referencedColumnName = "id")
-    private ProductClass productClasses;
+    @JoinColumn(name = "product_class_id")
+    private ProductClass productClass;
 
     @OneToMany(mappedBy = "product")
     Set<ProductSpecification> productSpecifications = new HashSet<>();
@@ -67,8 +67,6 @@ public class Product {
             joinColumns = @JoinColumn(name="product_id")
     )
     private Set<ProductHistory> productHistory = new HashSet<>();
-
-
 
 
 }

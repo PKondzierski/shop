@@ -19,15 +19,15 @@ public class ProductSpecification implements Serializable {
     private Product product;
 
     @Id
-    @ManyToOne(fetch = FetchType.LAZY)
+    @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "specification_id")
     private Specification specification;
 
 
     @Column(name="value_int")
-    private int valueInt;
+    private Integer valueInt;
     @Column(name="value_varchar")
-    private char valueVarchar;
+    private String valueVarchar;
     @Column(name="value_date")
     private LocalDate valueDate;
 

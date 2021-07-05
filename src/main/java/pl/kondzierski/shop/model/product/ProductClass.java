@@ -1,5 +1,6 @@
 package pl.kondzierski.shop.model.product;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -17,6 +18,6 @@ public class ProductClass {
     private Long id;
     private String name;
 
-    @OneToMany(mappedBy = "productClasses")
+    @OneToMany(mappedBy = "productClass")
     private Set<Product> products = new HashSet<>();
 }

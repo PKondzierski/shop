@@ -8,7 +8,7 @@ import pl.kondzierski.shop.model.product.Description;
 @Mapper(componentModel = "spring")
 public interface DescriptionMapper extends GlobalMapper<Description, DescriptionDto> {
     @Override
-    DescriptionDto ObjectTtoDto(Description description);
+    DescriptionDto ObjectToDto(Description description);
 
     @Override
     Description DtoToObject(DescriptionDto descriptionDto);

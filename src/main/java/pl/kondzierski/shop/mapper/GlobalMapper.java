@@ -4,7 +4,7 @@ import org.mapstruct.InheritInverseConfiguration;
 
 
 public interface GlobalMapper <T,S> {
-    S ObjectTtoDto (T t);
+    S ObjectToDto (T t);
     @InheritInverseConfiguration
     T DtoToObject (S s);
 }
